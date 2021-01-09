@@ -38,7 +38,7 @@ class AdminController extends Controller{
 
 							$EmailController = new EmailController();
 							$newpass = substr(str_shuffle('0123456789ABCDEFGHIJKLMNOPGRSTUVWXYZ'), 0, 6);
-							$this->user->tambah_driver(1,password_hash($newpass, PASSWORD_BCRYPT, ["cost" => 8]));
+							$this->user->tambah_admin(1,password_hash($newpass, PASSWORD_BCRYPT, ["cost" => 8]));
 							$EmailController->addadmin($_POST['email'], $newpass);
 
 							$namafilesementara = $_FILES['file']['tmp_name'];

@@ -107,7 +107,7 @@ class AngkutanController extends Controller{
 				return $this->view('edit_angkutan', ['header' => 'Edit Jenis Angkutan' , 'akun' => $this->akun, 'angkutan' => $angkutan , 'kabupaten' => $kab , 'listkab' => $listkab, 'listhal' => $listhal, 'halte' => $hal]); 
 			}else if($_SESSION['user'] == 2){
 				$angkutan =  $this->angkutan->get($id);
-				$kab = $this->kabupaten->get($_SESSION["admin_kab"]);
+				$kab = $this->kabupaten->get_kabupaten($_SESSION["admin_kab"]);
 				$listhal = $this->angkutan->get_halte_tersedia($angkutan->id_kabupaten);
 				$hal = $this->angkutan->get_halte_angkutan($angkutan->id_kabupaten,$angkutan->id);
 				if($_SESSION['admin_kab'] == $angkutan->id_kabupaten){

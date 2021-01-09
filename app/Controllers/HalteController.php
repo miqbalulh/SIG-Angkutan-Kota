@@ -88,10 +88,10 @@ class HalteController extends Controller{
 				return $this->view('edit_halte', ['header' => 'Edit Data Halte' , 'akun' => $this->akun, 'halte' => $halte  , 'listkab' => $listkab]); 
 			}else if($_SESSION['user'] == 2){
 				$halte =  $this->halte->get($id);
-				if($_SESSION['admin_kab'] == $angkutan->id_kabupaten){
+				if($_SESSION['admin_kab'] == $halte->id_kabupaten){
 					return $this->view('edit_halte', ['header' => 'Edit Data Halte' , 'akun' => $this->akun, 'halte' => $halte]); 
 				}else{
-					header("Location: ".$GLOBALS['path']."/angkutan");
+					header("Location: ".$GLOBALS['path']."/halte");
 				}
 			}else{
 				header("Location: ".$GLOBALS['path']."/dashboard");

@@ -231,10 +231,17 @@
         "weight": 2,
         "opacity": 0.6
        }
+
        var myStyle1 = {
         "color": "#f56f42",
         "weight": 2,
         "opacity": 0.6
+       }
+
+       var myStyle2 = {
+        "color": "#595959",
+        "weight": 2,
+        "opacity": 0.9
        }
 
         <?php if(isset($_SESSION['admin_kab'])): ?>
@@ -266,7 +273,20 @@
         <?php }
         } ?>
        
+        <?php if(isset($data['angkutan'])){
+            foreach ($data['angkutan'] as $ang) {?>
+        var jsonTest = new L.GeoJSON.AJAX(["<?= $GLOBALS['path']?>/assets/geojson/rute/<?= $ang->rute?>"],{ style: myStyle2}).addTo(mymap);
+        <?php }
+        } ?>
+
+
+        <?php if(isset($data['halte'])){
+            foreach ($data['halte'] as $hal) {?>
+           L.marker([<?= $hal->latitude?>, <?= $hal->longitude?>]).addTo(mymap)
+           .bindPopup('<b>Halte : </b><?=$hal->nama_halte?><br><b>Latitude : </b><?=$hal->latitude?><br><b>Longitude : </b><?=$hal->longitude?><br><b>Kabupaten : </b><?=$hal->nama_kabupaten?><br>');
         
+        <?php }
+        } ?>
    </script>
 
    

@@ -15,21 +15,21 @@ https://sigangkot.000webhostapp.com/public/login
 
 TIPE USER
 
-super admin:
-user : iqbalul.hidayat280199@gmail.com
-pass : test2801
+super admin:<br>
+user : iqbalul.hidayat280199@gmail.com<br>
+pass : test2801<br>
 
-admin kabupaten :
-user :iqbalul.hidayat2801@gmail.com
-pass :test2801
+admin kabupaten :<br>
+user : iqbalul.hidayat2801@gmail.com<br>
+pass : test2801<br>
 
-driver :
-user : muhammad.1705124011@mhs.unesa.ac.id
-pass : test2801
+driver :<br>
+user : muhammad.1705124011@mhs.unesa.ac.id<br>
+pass : test2801<br>
 
 Anggota Kelompok:
-Muhammad Iqbalul Hidayat 	    (17051204011)
-Arum Dewi Ayu Safira S 		    (17051204015)
-Sulistyanto Laili R 		      (17051204026)
+Muhammad Iqbalul Hidayat 	    (17051204011)<br>
+Arum Dewi Ayu Safira S 		    (17051204015)<br>
+Sulistyanto Laili R 		      (17051204026)<br>
 Dedy Putra Romadhon          	(17051204060)
 
